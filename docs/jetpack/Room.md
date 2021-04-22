@@ -2,9 +2,7 @@
 
 > `Room`是一个数据持久化库，它是Architecture Component的一部分。它让`SQLiteDatabase`的使用变得简单，大大减少了重复的代码，并且把SQL查询的检查放在了编译时。
 
-我们从`SQLite`迁移至`Room`作为了解的入口。
-
-### 从SQLite迁移到Room
+#### 从SQLite迁移到Room
 
 ##### 第一步：依赖
 
@@ -38,7 +36,7 @@ dependencies {
 - `Entity`：表示数据库中的表，属性会与数据库表column进行映射。
 - `DAO`：包含用于访问数据库的方法，实现具体的增删改查。
 
-如果应用在单个进程进行，在实例化 `RoomDatabase` 对象时应该遵循单例设计模式。
+**Note: **如果应用在单个进程进行，在实例化 `RoomDatabase` 对象时应该遵循单例设计模式。
 
 如果在多个进程中进行，需要在数据库构建器调用中包含 `enableMultiInstanceInvalidation` 。这样每个进程中都有一个 `RoomDatabase` 实例，可以在一个进程中使共享数据库文件失效，并且这种失效会自动传播到其他进程中 `AppDatabase` 的实例。
 
@@ -151,3 +149,9 @@ database = Room.databaseBuilder(context.getApplicationContext(),
 定义了两个函数，一个用于将`Date`对象转换为`Long`对象，另一个用于执行从`Long`到`Date`的反向转换。
 
 将`@TypeConverters`注释添加到`AppDatabase`类中，以便`Room`可以使用为该`AppDatabase` 中的每个实体和`DAO`定义的转换器。
+
+
+
+#### 附录
+
+[使用Room将数据保存到本地数据库](https://developer.android.com/training/data-storage/room)
