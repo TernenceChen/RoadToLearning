@@ -19,7 +19,7 @@ Google在应用架构指南中，提出两个常见的架构原则：
 
 ### 概览
 
-![image-20210421105545669](https://raw.githubusercontent.com/TernenceChen/RoadToLearning/master/image/image-20210421105545669.png?token=AKPZIOFRKFP3YMFP4LJDUEDAQD47E)
+![image-20210421105545669](https://raw.githubusercontent.com/TernenceChen/RoadToLearning/master/image/image-20210421105545669.png)
 
 每个组件仅依赖于其下一级的组件。
 
@@ -146,7 +146,7 @@ ViewModel中的LiveData类型数据得到更新
 
 View层的观察者Observer的回调方法onChanged()中收到新的数据，更新UI
 
-![image-20210422111836939](https://raw.githubusercontent.com/TernenceChen/RoadToLearning/master/image/image-20210422111836939.png?token=AKPZIOE3Y5HZ23YML7GGHOLAQD5A6)
+![image-20210422111836939](https://raw.githubusercontent.com/TernenceChen/RoadToLearning/master/image/image-20210422111836939.png)
 
 **数据驱动UI，通俗点讲就是当数据改变时对应的UI也要跟着变，反过来说就是当需要改变UI只需要改变对应的数据即可。**
 
@@ -180,7 +180,7 @@ ViewModel使用Pager中提供的`Flow<PagingData>` 监听数据刷新
 
 每当RecyclerView即将滚动到底部的时候，就会有新的数据的到来，最后，PagingDataAdapter展示数据
 
-![image-20210421175029939](https://raw.githubusercontent.com/TernenceChen/RoadToLearning/master/image/image-20210421175029939.png?token=AKPZIOHWMIZXZUM7ZXDL3MLAQD5AE)
+![image-20210421175029939](https://raw.githubusercontent.com/TernenceChen/RoadToLearning/master/image/image-20210421175029939.png)
 
 
 
